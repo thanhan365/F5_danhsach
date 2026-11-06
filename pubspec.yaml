@@ -1,0 +1,36 @@
+# Trích phần cần sửa trong pubspec.yaml của dự án.
+# CHÚ Ý: YAML tính theo thụt lề bằng DẤU CÁCH (không dùng Tab).
+# "flutter:" phải thẳng lề trái, "assets:" thụt vào 2 dấu cách,
+# mỗi đường dẫn thụt vào 4 dấu cách và bắt đầu bằng "- ".
+ 
+name: f5_231A010375
+description: Lab F5 - Danh sach va luoi trong Flutter
+ 
+environment:
+  sdk: ^3.9.0
+ 
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+ 
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+ 
+flutter:
+  uses-material-design: true
+ 
+  assets:
+    # Cách 1 – khai báo từng file
+    - assets/images/p1.jpg
+    - assets/images/p2.jpg
+    # Cách 2 – khai báo cả thư mục (KHÔNG đệ quy xuống thư mục con)
+    # Dấu "/" ở cuối là bắt buộc.
+    - assets/images/
+ 
+# Sau khi sửa pubspec.yaml phải:
+#   1) chạy "flutter pub get"
+#   2) Hot Restart (Shift+R) – Hot Reload KHÔNG nạp được asset mới
+  # see https://flutter.dev/to/font-from-package
